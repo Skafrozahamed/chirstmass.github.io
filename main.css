@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@1,300&family=Satisfy&display=swap'); 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Satisfy', cursive ,'Pacifico', cursive;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgb(11, 223, 11),rgb(5, 125, 237),rgb(6, 6, 55),#fff) ;
+}
+
+h1{
+    left: 40%;
+    margin: 10%;
+    padding: 10%;
+    font-weight: 700;
+    color: red;
+    font-size: 70px;
+    width: 50%;
+    text-shadow: 0 20px 20px rgba(0,0, 0,0.5);
+}
+
+.box{
+    position: relative;
+    left: 10%;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg , #fff ,#6d6c6f);
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0, 0,0.25);
+    border-radius: 50%;
+}
+.box img{
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    z-index: 3;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 0deg, #4f79ec 50%, transparent);
+    z-index: 1;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+    width: 350px;
+    height: 250px;
+    z-index: 1;
+}
+.box .snow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/snow1.png'), url('images/snow2.png'), url('images/snow3.png');  
+    animation: snow 20s linear infinite;
+    z-index: 3;
+    mix-blend-mode: screen;
+}
+@keyframes snow{
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        100% {background-position: 500px 1000px, 400px 400px, 300px 300px}
+}
+.snow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('images/snow1.png'), url('images/snow2.png'), url('images/snow3.png');  
+    animation: snow 20s linear infinite;
+    z-index: 3;
+    mix-blend-mode: screen;
+}
+@keyframes snow{
+        0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+        100% {background-position: 500px 1000px, 400px 400px, 300px 300px}
+}
